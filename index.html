@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <title>Letter Placement Averager</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <nav></nav>
+    </header>
+  
+    <main>
+      <h1>Krispy Krusty's Name Averager</h1>
+      <p>This program creates an average for the letters in any word by their placement in the alphabet.</p>
+      <h4>Type anything in the box below.<br />(Ex. words, names, phrases, etc.)</h4>
+      <input type="text" oninput="calcAv()" id="input-box" spellcheck="false">
+      <h2 id="output-av">Average Letter Placement: NaN</h2>
+      <h2 id="output-sum">Placement Sum: 0</h2>
+    </main>
+    
+    <footer>
+      <p>*Only characters from the English Alphabet are calculated*</p>
+    </footer>
+  </div>
+</body>
+</html>
