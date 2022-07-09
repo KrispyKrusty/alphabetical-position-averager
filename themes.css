@@ -1,0 +1,46 @@
+
+/* #region | Yellow */
+.theme-btn[set-theme="yellow"] {
+	background-color: goldenrod;
+	color: white;
+}
+
+body[theme="yellow"] {
+	color: #0c2546;
+	background-color: #f0e68c;
+}
+body[theme="yellow"] #input-box {
+  border: 4px solid #87ceeb;
+  background-color: #d0f2ff;
+  color: #0c2546;
+}
+body[theme="yellow"] main h1, body[theme="yellow"] main h2 {
+  background-color: #87ceeb;
+}
+body[theme="yellow"] #wrapper {
+	box-shadow: 0px 0px 10px 3px rgb(29, 45, 54);
+}
+/* #endregion */
+
+/* #region | Ocean */
+.theme-btn[set-theme="ocean"] {
+	background-color: #009797;
+	color: white;
+}
+
+body[theme="ocean"] {
+	color: #0c2546;
+	background-color: aquamarine;
+}
+body[theme="ocean"] #input-box {
+  border: 4px solid #87ceeb;
+  background-color: #d0f2ff;
+  color: #0c2546;
+}
+body[theme="ocean"] main h1, body[theme="ocean"] main h2 {
+  background-color: #87ceeb;
+}
+body[theme="ocean"] #wrapper {
+	box-shadow: 0px 0px 10px 3px rgb(29, 45, 54);
+}
+/* #endregion */

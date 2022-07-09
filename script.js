@@ -17,3 +17,17 @@ const calcAv = ()=>{
   
   outputSum.innerText = ("Placement Sum: " + ttlValue);
 }
+
+// Should work automatically with more theme buttons and theme styling
+const themes = document.getElementsByClassName("theme-btn");
+[].slice.call(themes).forEach(
+  /** @param {HTMLElement} elem */
+  (elem)=>{
+    elem.onclick = ()=>{
+      const theme = elem.getAttribute("set-theme");
+      console.log(theme);
+      if (theme == null) return;
+      document.body.setAttribute("theme", theme);
+    }
+  }
+);
