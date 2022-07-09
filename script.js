@@ -1,19 +1,19 @@
 const input = document.getElementById("input-box");
-const alph = ("abcdefghijklmnopqrstuvwxyz");
+const alph = "abcdefghijklmnopqrstuvwxyz";
 
-const calcAv = () => {
-  let ttlValue = 0;
-  let average = 0;
-  let usrIn = input.value.toLowerCase();
-  let goodStr = usrIn;
+const outputAverage = document.getElementById("output-av");
+const outputSum = document.getElementById("output-sum");
 
-  for (let i = 0; i < usrIn.length; i++) {
-    goodStr = usrIn.split("").filter((v, i, a)=> alph.includes(v)).join(""); //add char to new array if also found in 'alph'
-    console.log(alph.includes(usrIn.charAt(i)) + " " + goodStr);
-    ttlValue += alph.indexOf(usrIn.charAt(i)) + 1;
-  }
-
-  average = ttlValue/goodStr.length; 
-  document.getElementById("output-av").innerText = ("Average Letter Placement: " + average.toFixed(2) + "/26.00");
-  document.getElementById("output-sum").innerText = ("Placement Sum: " + ttlValue);
+const calcAv = ()=>{
+  const userInput = input.value.toLowerCase();
+  const userInputSplit = Array.from(userInput).filter(v => alph.includes(v));
+  const ttlValue = userInputSplit.reduce((p,c)=> p + alph.indexOf(c), 0);
+  const average = ttlValue/userInputSplit.length; 
+  
+  if (isNaN(average)) 
+    outputAverage.innerText = `Average Letter Placement: ...`;
+  else 
+    outputAverage.innerText = `Average Letter Placement: ${Math.round(average*100)/100}/26.00`;
+  
+  outputSum.innerText = ("Placement Sum: " + ttlValue);
 }
